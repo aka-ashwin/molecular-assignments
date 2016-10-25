@@ -1,0 +1,25 @@
+Note: all runs used 343 particles initialized on a simple cubic lattice.
+
+Part 1:
+(Used T* = 2., rho* = .5)
+
+From the plot, we can see there is some variation in total energy (per particle) over time, but note that it is very slight compared to the scale of the kinetic and potential energy individually, and the scale of their variations. Further, total energy is neither gained or lost on net over time, rather varying around its initial value.
+
+
+Part 2:
+(Used T* = 2.5, as this is comfortably above T_critical_LJ ~ 1.5 and, given Argon energy parameters, is equivalent to 297.5 K, or ~ 24 C, allowing for comparison to tabulated values at standard temperature.)
+
+d) At long times, the motion of the particles is the "thermalized" (though not isothermic) random Brownian motion of particles with no drift velocity. However, at initialization, there can be some drift velocity due to the fluid not being at equilibrium, such that there are short-term net forces on the particles once they have been perturbed from the metastable lattice state by their initial velocities. The effect of drift velocity is in providing an r ~ t -> r^2 ~ t^2 term, so that r^2(t) will be superlinear in this equilibration phase. 
+
+
+e) D appears to be roughly inversely proportional to rho*, as one can see from the graph. This is as we would expect - the higher the density, the harder it is for particles to diffuse through the system.
+
+f) Source 1 below says  water has an experimental D of 2.3 * 10^(-5) cm^2/s at T = 25C (near our T*, which = 24 C for argon parameters) and 1 atm. But 1 atm corresponds to P*_argon = 1 atm * sigma^3/epsilon = .002414, much lower than the Lennard-Jones fluid pressure for any density we have considered: for T* = 2.5, rho* = .1, P* = .238 according to source 2.
+
+However, our D values were in the same range as water's value, with our value at rho* = .5 being particularly close. rho* = .5, T = 2.5 corresponds to P* = 1.7 ~ 700 atm. Further, pressure of a Lennard-Jones fluid is roughly linear in its density, so this (very roughly) implies the Lennard-Jones fluid would have pressure of about 1atm at 1/700th of its density. Since we have seen that D is roughly inversely correlated with rho*, this implies that the diffusivity of a Lennard-Jones gas with Argon-like parameters is roughly 700 times that of liquid water.
+
+
+
+Source 1: Michael W. Mahoney and William L. Jorgensen, Diffusion constant of the TIP5P model of liquid water. J. Chem. Phys. 114, 363 (2001) [http://scitation.aip.org/content/aip/journal/jcp/114/1/10.1063/1.1329346]
+
+Source 2: J. K. Johnson et. al., The Lennard-Jones Equation of State Revisited.
